@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="abu">#716D6D</color>
     <color name="kuning">#FFEB3B</color>
+    <color name="merah">#FF0000</color>
+    <color name="biru">#0000FF</color>
 </resources>
