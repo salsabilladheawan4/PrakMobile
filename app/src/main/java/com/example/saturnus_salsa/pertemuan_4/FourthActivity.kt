@@ -2,7 +2,7 @@ package com.example.saturnus_salsa.pertemuan_4
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log // 1. Pastikan import Log sudah ada
+import android.util.Log
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
