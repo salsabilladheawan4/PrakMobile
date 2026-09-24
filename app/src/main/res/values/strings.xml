@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">saturnus-salsa</string>
+    <string name="verif">Verification</string>
+    <string name="kode_berhasil_dikirim">Kode Berhasil dikirim !</string>
+    <string name="silahkan_periksa_nomor_anda">Silahkan periksa nomor anda</string>
+    <string name="pertemuan_4">Ke Fourth Activity</string>
+    <string name="kembali">Kembali</string>
+</resources>
