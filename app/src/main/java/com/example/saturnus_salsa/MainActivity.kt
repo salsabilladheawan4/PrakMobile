@@ -44,6 +44,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val btnToSeventh = findViewById<Button>(R.id.btnToSeventh)
+        btnToSeventh.setOnClickListener {
+            val intent = Intent(this, com.example.saturnus_salsa.pertemuan_7.SeventhActivity::class.java)
+            startActivity(intent)
+        }
+
         val btnLogout = findViewById<Button>(R.id.btnLogout)
         btnLogout.setOnClickListener {
             com.google.android.material.dialog.MaterialAlertDialogBuilder(this)
