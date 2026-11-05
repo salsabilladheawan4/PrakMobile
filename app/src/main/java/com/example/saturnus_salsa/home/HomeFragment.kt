@@ -10,10 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.saturnus_salsa.AuthActivity
 import com.example.saturnus_salsa.databinding.FragmentHomeBinding
-import com.example.saturnus_salsa.home.pertemuan_4.FourthActivity
-import com.example.saturnus_salsa.home.pertemuan_5.FifthActivity
-import com.example.saturnus_salsa.home.pertemuan_6.SixthActivity
-import com.example.saturnus_salsa.home.pertemuan_7.SeventhActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class HomeFragment : Fragment() {
@@ -38,7 +34,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.btnToFourth.setOnClickListener {
-            val intent = Intent(requireContext(), FourthActivity::class.java)
+            val intent = Intent(requireContext(), com.example.saturnus_salsa.pertemuan_4.FourthActivity::class.java)
             intent.putExtra("name", "Politeknik Caltex Riau")
             intent.putExtra("from", "Rumbai")
             intent.putExtra("age", 25)
@@ -46,15 +42,15 @@ class HomeFragment : Fragment() {
         }
 
         binding.btnToFifth.setOnClickListener {
-            startActivity(Intent(requireContext(), FifthActivity::class.java))
+            startActivity(Intent(requireContext(), com.example.saturnus_salsa.pertemuan_5.FifthActivity::class.java))
         }
 
         binding.btnToSixth.setOnClickListener {
-            startActivity(Intent(requireContext(), SixthActivity::class.java))
+            startActivity(Intent(requireContext(), com.example.saturnus_salsa.pertemuan_6.SixthActivity::class.java))
         }
 
         binding.btnToSeventh.setOnClickListener {
-            startActivity(Intent(requireContext(), SeventhActivity::class.java))
+            startActivity(Intent(requireContext(), com.example.saturnus_salsa.pertemuan_7.SeventhActivity::class.java))
         }
 
         binding.btnLogout.setOnClickListener {
