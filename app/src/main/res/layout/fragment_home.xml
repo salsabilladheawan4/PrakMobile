@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/screen_background"
     tools:context=".home.HomeFragment">
 
     <View
@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pemrograman Mobile"
-        android:textColor="#333333"
+        android:textColor="@color/text_primary"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayoutButtons"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,10 +54,10 @@
             android:layout_width="160dp"
             android:layout_height="48dp"
             android:layout_marginBottom="12dp"
-            android:backgroundTint="#82BFC8"
+            android:backgroundTint="@color/palette_p4"
             android:text="pertemuan_4"
             android:textAllCaps="false"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="12sp"
             app:cornerRadius="24dp" />
 
@@ -66,10 +66,10 @@
             android:layout_width="160dp"
             android:layout_height="48dp"
             android:layout_marginBottom="12dp"
-            android:backgroundTint="#E9306D"
+            android:backgroundTint="@color/palette_p5"
             android:text="Pertemuan_5"
             android:textAllCaps="false"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="12sp"
             app:cornerRadius="24dp" />
 
@@ -78,10 +78,10 @@
             android:layout_width="160dp"
             android:layout_height="48dp"
             android:layout_marginBottom="12dp"
-            android:backgroundTint="#4CAF50"
+            android:backgroundTint="@color/palette_p6"
             android:text="Pertemuan_6"
             android:textAllCaps="false"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="12sp"
             app:cornerRadius="24dp" />
 
@@ -90,10 +90,10 @@
             android:layout_width="160dp"
             android:layout_height="48dp"
             android:layout_marginBottom="12dp"
-            android:backgroundTint="#2196F3"
+            android:backgroundTint="@color/palette_p7"
             android:text="Pertemuan_7"
             android:textAllCaps="false"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="12sp"
             app:cornerRadius="24dp" />
 
@@ -102,7 +102,7 @@
             android:layout_width="160dp"
             android:layout_height="48dp"
             android:layout_marginBottom="16dp"
-            android:backgroundTint="#9C27B0"
+            android:backgroundTint="@color/palette_p10"
             android:text="Pertemuan_10"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
@@ -113,7 +113,7 @@
             android:id="@+id/btnLogout"
             android:layout_width="120dp"
             android:layout_height="48dp"
-            android:backgroundTint="#FF5722"
+            android:backgroundTint="@color/palette_logout"
             android:text="Logout"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
