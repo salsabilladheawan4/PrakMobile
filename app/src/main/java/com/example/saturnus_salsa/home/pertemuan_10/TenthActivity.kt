@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.saturnus_salsa.databinding.ActivityTenthBinding
+import com.google.android.material.chip.Chip
 
 class TenthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTenthBinding
@@ -43,6 +44,14 @@ class TenthActivity : AppCompatActivity() {
                 Toast.makeText(this, "Login dengan email: $email", Toast.LENGTH_SHORT).show()
             } else {
                 binding.textInputLayout.error = "Email tidak boleh kosong"
+            }
+        }
+
+        binding.chipGroupFilter.setOnCheckedStateChangeListener { group, checkedIds ->
+            val selectedChipId = checkedIds.firstOrNull()
+            if (selectedChipId != null) {
+                val chip = group.findViewById<Chip>(selectedChipId)
+                Toast.makeText(this, "Filter: ${chip.text}", Toast.LENGTH_SHORT).show()
             }
         }
     }
