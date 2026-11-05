@@ -1,4 +1,4 @@
-package com.example.saturnus_salsa.home.pertemuan_9
+package com.example.saturnus_salsa.home.pertemuan_10
 
 import android.os.Bundle
 import android.widget.Toast
@@ -6,16 +6,16 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.saturnus_salsa.databinding.ActivityNinthBinding
+import com.example.saturnus_salsa.databinding.ActivityTenthBinding
 
-class NinthActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityNinthBinding
+class TenthActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityTenthBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        binding = ActivityNinthBinding.inflate(layoutInflater)
+        binding = ActivityTenthBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
@@ -26,7 +26,7 @@ class NinthActivity : AppCompatActivity() {
 
         // Setup Toolbar
         setSupportActionBar(binding.toolbar)
-        binding.toolbar.title = "Pertemuan 9"
+        binding.toolbar.title = "Pertemuan 10"
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)

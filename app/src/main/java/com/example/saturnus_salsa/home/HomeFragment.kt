@@ -53,8 +53,8 @@ class HomeFragment : Fragment() {
             startActivity(Intent(requireContext(), com.example.saturnus_salsa.pertemuan_7.SeventhActivity::class.java))
         }
 
-        binding.btnToNinth.setOnClickListener {
-            startActivity(Intent(requireContext(), com.example.saturnus_salsa.home.pertemuan_9.NinthActivity::class.java))
+        binding.btnToTenth.setOnClickListener {
+            startActivity(Intent(requireContext(), com.example.saturnus_salsa.home.pertemuan_10.TenthActivity::class.java))
         }
 
         binding.btnLogout.setOnClickListener {
