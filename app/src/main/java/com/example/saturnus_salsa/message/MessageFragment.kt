@@ -12,6 +12,18 @@ class MessageFragment : Fragment() {
     private var _binding: FragmentMessageBinding? = null
     private val binding get() = _binding!!
 
+    // Avatar karakter ilustrasi estetik & lucu (DiceBear Lorelei)
+    private val messageList = listOf(
+        MessageModel("Alya", "Halo! Apa kabar?", "https://api.dicebear.com/7.x/lorelei/png?seed=Alya", "09:41"),
+        MessageModel("Budi", "Sudah makan?", "https://api.dicebear.com/7.x/lorelei/png?seed=Budi", "09:15"),
+        MessageModel("Citra", "Jangan lupa tugasnya ya!", "https://api.dicebear.com/7.x/lorelei/png?seed=Citra", "Kemarin"),
+        MessageModel("Dika", "Besok kita rapat jam 9", "https://api.dicebear.com/7.x/lorelei/png?seed=Dika", "Kemarin"),
+        MessageModel("Eka", "Nice job kemarin!", "https://api.dicebear.com/7.x/lorelei/png?seed=Eka", "2 Hari lalu"),
+        MessageModel("Fajar", "Lagi ngapain?", "https://api.dicebear.com/7.x/lorelei/png?seed=Fajar", "2 Hari lalu"),
+        MessageModel("Gita", "Boleh minta tolong?", "https://api.dicebear.com/7.x/lorelei/png?seed=Gita", "3 Hari lalu"),
+        MessageModel("Hana", "Lihat email ya", "https://api.dicebear.com/7.x/lorelei/png?seed=Hana", "3 Hari lalu")
+    )
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,6 +39,9 @@ class MessageFragment : Fragment() {
         (requireActivity() as AppCompatActivity).supportActionBar?.apply {
             title = "Message"
         }
+
+        val adapter = MessageAdapter(requireContext(), messageList)
+        binding.listMessageItems.adapter = adapter
     }
 
     override fun onDestroyView() {
