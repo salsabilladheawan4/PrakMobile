@@ -80,9 +80,21 @@
             android:id="@+id/btnToSeventh"
             android:layout_width="160dp"
             android:layout_height="48dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="12dp"
             android:backgroundTint="#2196F3"
             android:text="Pertemuan_7"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:cornerRadius="24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnToNinth"
+            android:layout_width="160dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#9C27B0"
+            android:text="Pertemuan_9"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="12sp"

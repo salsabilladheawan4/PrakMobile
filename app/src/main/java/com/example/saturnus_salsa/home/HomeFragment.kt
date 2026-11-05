@@ -53,6 +53,10 @@ class HomeFragment : Fragment() {
             startActivity(Intent(requireContext(), com.example.saturnus_salsa.pertemuan_7.SeventhActivity::class.java))
         }
 
+        binding.btnToNinth.setOnClickListener {
+            startActivity(Intent(requireContext(), com.example.saturnus_salsa.home.pertemuan_9.NinthActivity::class.java))
+        }
+
         binding.btnLogout.setOnClickListener {
             MaterialAlertDialogBuilder(requireContext())
                 .setTitle("Konfirmasi Logout")
