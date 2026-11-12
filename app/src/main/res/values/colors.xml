@@ -7,28 +7,29 @@
     <color name="merah">#FF0000</color>
     <color name="biru">#0000FF</color>
 
-    <!-- Sofia Pastel Color Palette -->
-    <color name="pastel_pink">#F4C2C2</color>
-    <color name="macaron_mint">#BFE3D0</color>
-    <color name="powder_blue">#B8D4E8</color>
-    <color name="butter_cream">#FBEBC5</color>
-    <color name="dusty_lavender">#C9B8DB</color>
-    <color name="soft_gold">#D4AF37</color>
+    <!-- Palet Pink Utama & Aksen -->
+    <color name="rose_pink">#F28CA8</color>
+    <color name="blush">#FAD4DC</color>
+    <color name="dusty_rose">#C9657F</color>
+    <color name="cream">#FFF4E6</color>
+    <color name="soft_mint">#BFE3D0</color>
+    <color name="lavender">#CDB8E0</color>
+    <color name="plum">#4A2A3A</color>
 
-    <!-- Mapping Tema Aplikasi Menggunakan Palet Sofia -->
-    <color name="purple_primary">@color/dusty_lavender</color>     <!-- Header (Toolbar) & Bottom Nav -->
-    <color name="purple_primary_dark">#7D6D8F</color>
-    <color name="purple_container">@color/butter_cream</color>
-    <color name="purple_light">@color/powder_blue</color>
+    <!-- Mapping Tema Aplikasi -->
+    <color name="purple_primary">@color/rose_pink</color>         <!-- Header (Toolbar) & Bottom Nav -->
+    <color name="purple_primary_dark">@color/dusty_rose</color>
+    <color name="purple_container">@color/cream</color>
+    <color name="purple_light">@color/blush</color>
 
-    <color name="screen_background">@color/butter_cream</color>    <!-- Latar Belakang Layar -->
-    <color name="text_primary">#2B2B2B</color>                     <!-- Teks Utama -->
+    <color name="screen_background">@color/cream</color>          <!-- Background Layar -->
+    <color name="text_primary">@color/plum</color>                <!-- Teks Utama -->
 
-    <!-- Tombol Menu Menggunakan Palet Sofia -->
-    <color name="palette_p4">@color/macaron_mint</color>          <!-- Pertemuan 4 -->
-    <color name="palette_p5">@color/powder_blue</color>           <!-- Pertemuan 5 -->
-    <color name="palette_p6">@color/dusty_lavender</color>        <!-- Pertemuan 6 -->
-    <color name="palette_p7">@color/pastel_pink</color>           <!-- Pertemuan 7 -->
-    <color name="palette_p10">@color/soft_gold</color>            <!-- Pertemuan 10 -->
-    <color name="palette_logout">#D98888</color>                   <!-- Tombol Logout (Soft Red) -->
+    <!-- Tombol Menggunakan Palet Baru -->
+    <color name="palette_p4">@color/rose_pink</color>
+    <color name="palette_p5">@color/soft_mint</color>
+    <color name="palette_p6">@color/lavender</color>
+    <color name="palette_p7">@color/blush</color>
+    <color name="palette_p10">@color/dusty_rose</color>
+    <color name="palette_logout">#D98888</color>
 </resources>
