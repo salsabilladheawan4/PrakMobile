@@ -101,9 +101,21 @@
             android:id="@+id/btnToTenth"
             android:layout_width="160dp"
             android:layout_height="48dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="12dp"
             android:backgroundTint="@color/palette_p10"
             android:text="Pertemuan_10"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:cornerRadius="24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnToEleventh"
+            android:layout_width="160dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/palette_logout"
+            android:text="Pertemuan_11"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="12sp"

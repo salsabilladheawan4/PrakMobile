@@ -1,4 +1,4 @@
-package com.example.saturnus_salsa.home.pertemuan_10
+package com.example.saturnus_salsa.pertemuan_10
 
 import android.os.Bundle
 import android.widget.Toast
