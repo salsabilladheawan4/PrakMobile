@@ -74,6 +74,10 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
+            android:name=".message.tutorial.TutorialMessageActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
             android:name=".pertemuan_5.WebViewActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
