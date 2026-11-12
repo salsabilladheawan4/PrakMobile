@@ -28,7 +28,7 @@ class EleventhActivity : AppCompatActivity() {
 
         // Setup Toolbar
         setSupportActionBar(binding.toolbar)
-        binding.toolbar.title = "Pertemuan 11"
+        binding.toolbar.title = "Pertemuan 11 - RecyclerView"
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
@@ -59,6 +59,10 @@ class EleventhActivity : AppCompatActivity() {
                     val badge = tab.orCreateBadge
                     badge.isVisible = false
                     badge.number = 5
+                }
+                2 -> {
+                    tab.text = "Produk"
+                    tab.icon = ContextCompat.getDrawable(this, R.drawable.ic_more)
                 }
             }
         }.attach()
