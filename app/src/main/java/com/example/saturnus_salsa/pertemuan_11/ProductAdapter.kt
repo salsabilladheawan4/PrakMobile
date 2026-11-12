@@ -2,6 +2,7 @@ package com.example.saturnus_salsa.pertemuan_11
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.saturnus_salsa.databinding.ItemProductBinding
@@ -34,6 +35,7 @@ class ProductAdapter(
             root.setOnClickListener {
                 onItemClick(item)
             }
+            Log.e("output", item.name)
         }
     }
 
