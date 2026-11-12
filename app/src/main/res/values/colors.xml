@@ -7,20 +7,28 @@
     <color name="merah">#FF0000</color>
     <color name="biru">#0000FF</color>
 
-    <!-- Palet Warna Fresh Matcha & Strawberry Pink -->
-    <color name="purple_primary">#8FA382</color>       <!-- Fresh Matcha (Header & Bottom Nav) -->
-    <color name="purple_primary_dark">#2C3E2B</color>
-    <color name="purple_container">#FFFDF9</color>
-    <color name="purple_light">#B9D8B1</color>
+    <!-- Sofia Pastel Color Palette -->
+    <color name="pastel_pink">#F4C2C2</color>
+    <color name="macaron_mint">#BFE3D0</color>
+    <color name="powder_blue">#B8D4E8</color>
+    <color name="butter_cream">#FBEBC5</color>
+    <color name="dusty_lavender">#C9B8DB</color>
+    <color name="soft_gold">#D4AF37</color>
 
-    <color name="screen_background">#FFFDF9</color>      <!-- Milk Cream Background -->
-    <color name="text_primary">#2C3E2B</color>         <!-- Deep Green Text -->
+    <!-- Mapping Tema Aplikasi Menggunakan Palet Sofia -->
+    <color name="purple_primary">@color/dusty_lavender</color>     <!-- Header (Toolbar) & Bottom Nav -->
+    <color name="purple_primary_dark">#7D6D8F</color>
+    <color name="purple_container">@color/butter_cream</color>
+    <color name="purple_light">@color/powder_blue</color>
 
-    <!-- Tombol Sesuai Palet Baru -->
-    <color name="palette_p4">#F08A9B</color>           <!-- Strawberry Pink (Pertemuan 4) -->
-    <color name="palette_p5">#A2C59B</color>           <!-- Creamy Matcha Green (Pertemuan 5) -->
-    <color name="palette_p6">#F6B8C3</color>           <!-- Soft Blossom Pink (Pertemuan 6) -->
-    <color name="palette_p7">#B9D8B1</color>           <!-- Light Pistachio (Pertemuan 7) -->
-    <color name="palette_p10">#F7C5B8</color>          <!-- Sweet Peach Pink (Pertemuan 10) -->
-    <color name="palette_logout">#E06D75</color>       <!-- Fresh Berry Red (Logout) -->
+    <color name="screen_background">@color/butter_cream</color>    <!-- Latar Belakang Layar -->
+    <color name="text_primary">#2B2B2B</color>                     <!-- Teks Utama -->
+
+    <!-- Tombol Menu Menggunakan Palet Sofia -->
+    <color name="palette_p4">@color/macaron_mint</color>          <!-- Pertemuan 4 -->
+    <color name="palette_p5">@color/powder_blue</color>           <!-- Pertemuan 5 -->
+    <color name="palette_p6">@color/dusty_lavender</color>        <!-- Pertemuan 6 -->
+    <color name="palette_p7">@color/pastel_pink</color>           <!-- Pertemuan 7 -->
+    <color name="palette_p10">@color/soft_gold</color>            <!-- Pertemuan 10 -->
+    <color name="palette_logout">#D98888</color>                   <!-- Tombol Logout (Soft Red) -->
 </resources>
