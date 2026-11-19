@@ -12,6 +12,11 @@ import com.example.saturnus_salsa.AuthActivity
 import com.example.saturnus_salsa.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
+import android.util.Log
+import androidx.lifecycle.lifecycleScope
+import com.example.saturnus_salsa.home.data.api.CatFactApiClient
+import kotlinx.coroutines.launch
+
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -34,6 +39,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.btnToFourth.setOnClickListener {
+            Log.d("HomeFragment", "btnToFourth clicked")
             val intent = Intent(requireContext(), com.example.saturnus_salsa.pertemuan_4.FourthActivity::class.java)
             intent.putExtra("name", "Politeknik Caltex Riau")
             intent.putExtra("from", "Rumbai")
@@ -81,6 +87,24 @@ class HomeFragment : Fragment() {
                     dialog.dismiss()
                 }
                 .show()
+        }
+
+        loadCatFact()
+
+        binding.btnRefresh.setOnClickListener {
+            binding.tvCatFact.text = "Loading cat fact..."
+            loadCatFact()
+        }
+    }
+
+    private fun loadCatFact() {
+        lifecycleScope.launch {
+            try {
+                val response = CatFactApiClient.apiService.getCatFact()
+                binding.tvCatFact.text = "\"${response.fact}\""
+            } catch (e: Exception) {
+                binding.tvCatFact.text = "Gagal mengambil fakta kucing."
+            }
         }
     }
 
