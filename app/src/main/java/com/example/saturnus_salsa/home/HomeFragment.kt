@@ -14,7 +14,11 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 import android.util.Log
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.saturnus_salsa.home.data.api.CatFactApiClient
+import com.example.saturnus_salsa.home.photo.PhotoApiClient
+import com.example.saturnus_salsa.home.photo.PhotoAdapter
+import android.widget.Toast
 import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
@@ -63,10 +67,6 @@ class HomeFragment : Fragment() {
             startActivity(Intent(requireContext(), com.example.saturnus_salsa.pertemuan_10.TenthActivity::class.java))
         }
 
-        binding.btnToEleventh.setOnClickListener {
-            startActivity(Intent(requireContext(), com.example.saturnus_salsa.pertemuan_11.EleventhActivity::class.java))
-        }
-
         binding.btnLogout.setOnClickListener {
             MaterialAlertDialogBuilder(requireContext())
                 .setTitle("Konfirmasi Logout")
@@ -95,6 +95,8 @@ class HomeFragment : Fragment() {
             binding.tvCatFact.text = "Loading cat fact..."
             loadCatFact()
         }
+
+        loadPhoto()
     }
 
     private fun loadCatFact() {
@@ -104,6 +106,19 @@ class HomeFragment : Fragment() {
                 binding.tvCatFact.text = "\"${response.fact}\""
             } catch (e: Exception) {
                 binding.tvCatFact.text = "Gagal mengambil fakta kucing."
+            }
+        }
+    }
+
+    private fun loadPhoto() {
+        lifecycleScope.launch {
+            try {
+                val photos = PhotoApiClient.apiService.getPhotos()
+                val adapter = PhotoAdapter(photos)
+                binding.rvGallery.adapter = adapter
+                binding.rvGallery.layoutManager = LinearLayoutManager(requireContext())
+            } catch (e: Exception) {
+                Toast.makeText(requireContext(), "Gagal memuat gambar", Toast.LENGTH_SHORT).show()
             }
         }
     }
