@@ -11,6 +11,8 @@ import com.example.saturnus_salsa.home.HomeFragment
 import com.example.saturnus_salsa.message.MessageFragment
 import com.example.saturnus_salsa.more.MoreFragment
 
+import com.example.saturnus_salsa.note.NoteFragment
+
 class BaseActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityBaseBinding
@@ -44,6 +46,10 @@ class BaseActivity : AppCompatActivity() {
                 }
                 R.id.more -> {
                     replaceFragment(MoreFragment())
+                    true
+                }
+                R.id.note -> {
+                    replaceFragment(NoteFragment())
                     true
                 }
                 else -> false
