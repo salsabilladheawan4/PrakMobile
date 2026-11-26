@@ -67,6 +67,10 @@ class HomeFragment : Fragment() {
             startActivity(Intent(requireContext(), com.example.saturnus_salsa.pertemuan_10.TenthActivity::class.java))
         }
 
+        binding.btnToEleventh.setOnClickListener {
+            startActivity(Intent(requireContext(), com.example.saturnus_salsa.pertemuan_11.EleventhActivity::class.java))
+        }
+
         binding.btnLogout.setOnClickListener {
             MaterialAlertDialogBuilder(requireContext())
                 .setTitle("Konfirmasi Logout")
@@ -100,23 +104,29 @@ class HomeFragment : Fragment() {
     }
 
     private fun loadCatFact() {
-        lifecycleScope.launch {
+        viewLifecycleOwner.lifecycleScope.launch {
             try {
                 val response = CatFactApiClient.apiService.getCatFact()
-                binding.tvCatFact.text = "\"${response.fact}\""
+                if (_binding != null) {
+                    binding.tvCatFact.text = "\"${response.fact}\""
+                }
             } catch (e: Exception) {
-                binding.tvCatFact.text = "Gagal mengambil fakta kucing."
+                if (_binding != null) {
+                    binding.tvCatFact.text = "Gagal mengambil fakta kucing."
+                }
             }
         }
     }
 
     private fun loadPhoto() {
-        lifecycleScope.launch {
+        viewLifecycleOwner.lifecycleScope.launch {
             try {
                 val photos = PhotoApiClient.apiService.getPhotos()
-                val adapter = PhotoAdapter(photos)
-                binding.rvGallery.adapter = adapter
-                binding.rvGallery.layoutManager = LinearLayoutManager(requireContext())
+                if (_binding != null) {
+                    val adapter = PhotoAdapter(photos)
+                    binding.rvGallery.adapter = adapter
+                    binding.rvGallery.layoutManager = LinearLayoutManager(requireContext())
+                }
             } catch (e: Exception) {
                 Toast.makeText(requireContext(), "Gagal memuat gambar", Toast.LENGTH_SHORT).show()
             }

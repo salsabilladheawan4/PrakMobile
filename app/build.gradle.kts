@@ -1,4 +1,7 @@
-plugins { alias(libs.plugins.android.application) } 
+plugins { 
+    alias(libs.plugins.android.application)
+    id("com.google.devtools.ksp")
+} 
 
 android {
     namespace = "com.example.saturnus_salsa" 
@@ -44,6 +47,12 @@ dependencies {
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("com.tbuonomo:dotsindicator:5.1.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    
+    // Room
+    val room_version = "2.7.0"
+    implementation("androidx.room:room-runtime:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+    ksp("androidx.room:room-compiler:$room_version")
     
     // Retrofit & Coroutines
     implementation("com.squareup.retrofit2:retrofit:2.9.0")

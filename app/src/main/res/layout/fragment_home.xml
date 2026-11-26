@@ -55,22 +55,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
-                android:id="@+id/linearLayoutButtons"
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/grid_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical"
+                app:columnCount="2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewWelcome">
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnToFourth"
-                    android:layout_width="160dp"
+                    android:layout_width="150dp"
                     android:layout_height="48dp"
-                    android:layout_marginBottom="12dp"
+                    android:layout_margin="8dp"
                     android:backgroundTint="@color/palette_p4"
                     android:text="pertemuan_4"
                     android:textAllCaps="false"
@@ -80,9 +79,9 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnToFifth"
-                    android:layout_width="160dp"
+                    android:layout_width="150dp"
                     android:layout_height="48dp"
-                    android:layout_marginBottom="12dp"
+                    android:layout_margin="8dp"
                     android:backgroundTint="@color/palette_p5"
                     android:text="Pertemuan_5"
                     android:textAllCaps="false"
@@ -92,9 +91,9 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnToSixth"
-                    android:layout_width="160dp"
+                    android:layout_width="150dp"
                     android:layout_height="48dp"
-                    android:layout_marginBottom="12dp"
+                    android:layout_margin="8dp"
                     android:backgroundTint="@color/palette_p6"
                     android:text="Pertemuan_6"
                     android:textAllCaps="false"
@@ -104,9 +103,9 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnToSeventh"
-                    android:layout_width="160dp"
+                    android:layout_width="150dp"
                     android:layout_height="48dp"
-                    android:layout_marginBottom="12dp"
+                    android:layout_margin="8dp"
                     android:backgroundTint="@color/palette_p7"
                     android:text="Pertemuan_7"
                     android:textAllCaps="false"
@@ -116,9 +115,9 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnToTenth"
-                    android:layout_width="160dp"
+                    android:layout_width="150dp"
                     android:layout_height="48dp"
-                    android:layout_marginBottom="12dp"
+                    android:layout_margin="8dp"
                     android:backgroundTint="@color/palette_p10"
                     android:text="Pertemuan_10"
                     android:textAllCaps="false"
@@ -127,17 +126,32 @@
                     app:cornerRadius="24dp" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnLogout"
-                    android:layout_width="120dp"
+                    android:id="@+id/btnToEleventh"
+                    android:layout_width="150dp"
                     android:layout_height="48dp"
-                    android:backgroundTint="@color/palette_logout"
-                    android:text="Logout"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="@color/purple_primary"
+                    android:text="Pertemuan_11"
                     android:textAllCaps="false"
                     android:textColor="#FFFFFF"
                     android:textSize="12sp"
                     app:cornerRadius="24dp" />
 
-            </LinearLayout>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLogout"
+                    android:layout_width="150dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="@color/palette_logout"
+                    android:text="Logout"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    app:layout_columnSpan="2"
+                    app:layout_gravity="center_horizontal"
+                    app:cornerRadius="24dp" />
+
+            </androidx.gridlayout.widget.GridLayout>
 
             <TextView
                 android:id="@+id/tvCatFact"
@@ -149,7 +163,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/text_primary"
                 android:textSize="14sp"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayoutButtons" />
+                app:layout_constraintTop_toBottomOf="@+id/grid_button" />
 
             <Button
                 android:id="@+id/btnRefresh"
